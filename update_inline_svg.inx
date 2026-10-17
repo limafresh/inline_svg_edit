@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Update inline SVG</name>
+    <id>com.github.limafresh.inline_svg_edit.update_inline_svg</id>
+    <param name="html_path" type="path" mode="file" filetypes="html" gui-text="HTML file path: "></param>
+    <param name="indent_type" type="optiongroup" gui-text="Indent type: ">
+        <option value="space">Space</option>
+        <option value="tab">Tab</option>
+    </param>
+    <param name="number_of_indents" type="int" min="1" max="8" default="2" gui-text="Number of indents: "></param>
+    <param name="optimize_svg" type="bool" gui-text="Optimize SVG">true</param>
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Web"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">update_inline_svg.py</command>
+    </script>
+</inkscape-extension>
